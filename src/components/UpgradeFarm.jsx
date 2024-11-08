@@ -1,3 +1,4 @@
+import FarmImage from "../assets/tractor.png";
 export default function UpgradeFarm({ buyFarm, farmCount }) {
   return (
     <div className="upgradeOptions">
@@ -8,7 +9,7 @@ export default function UpgradeFarm({ buyFarm, farmCount }) {
       <div>
         <button id="farm-btn" onClick={buyFarm}>
           <img
-            src="src/assets/tractor.png"
+            src={FarmImage}
             width={50}
             height={50}
             alt="A Farm"

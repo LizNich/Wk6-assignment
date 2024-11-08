@@ -1,3 +1,4 @@
+import FactoryImage from "../assets/factory.png";
 export default function UpgradeFactory({ buyFactory, factoryCount }) {
   return (
     <div className="upgradeOptions">
@@ -8,7 +9,7 @@ export default function UpgradeFactory({ buyFactory, factoryCount }) {
       <div>
         <button id="factory-btn" onClick={buyFactory}>
           <img
-            src="src/assets/factory.png"
+            src={FactoryImage}
             width={50}
             height={50}
             alt="A Factory"

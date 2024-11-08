@@ -1,3 +1,4 @@
+import GrandmaImage from "../assets/grandma.png";
 export default function UpgradeGrandma({ buyGrandma, grandmaCount }) {
   return (
     <div className="upgradeOptions">
@@ -8,7 +9,7 @@ export default function UpgradeGrandma({ buyGrandma, grandmaCount }) {
       <div>
         <button id="grandma-btn" onClick={buyGrandma}>
           <img
-            src="src/assets/grandma.png"
+            src={GrandmaImage}
             width={50}
             height={50}
             alt="Grandma"
