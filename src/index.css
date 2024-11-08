@@ -13,11 +13,16 @@
 /* <<>> */
 
 body {
-  position: absolute;
-  background-size: cover;
-  background-image: url(assets/Xmas.png);
-  color: var(--primary-color);
   font-weight: bold;
+  position: absolute;
+  font-weight: bold;
+  height: 100vh;
+  color: var(--primary-color);
+  background-image: url(assets/Xmas.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 h1 {
