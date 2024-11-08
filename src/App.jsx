@@ -82,22 +82,24 @@ export default function App() {
 
   return (
     <div>
-      <h1>Lets Make Christmas Cookies!</h1>
-      <main>
-        <div className="container">
-          <div className="box box-one">
-            <DisplayCookie incrementCookies={incrementCookies} />
+      <h1>
+        Lets Make <em>Christmas</em> Cookies!
+      </h1>
+
+      <div className="container">
+        <div className="box box-one">
+          <DisplayCookie incrementCookies={incrementCookies} />
+        </div>
+        <div className="box box-two">
+          <div className="sub-box">
+            <p>Cookies: {cookies}</p>
           </div>
-          <div className="box box-two">
-            <div className="sub-box">
-              <p>Cookies: {cookies}</p>
-            </div>
-            <div className="sub-box">
-              <p>Cookies Per Second: {cps}</p>
-            </div>
+          <div className="sub-box">
+            <p>Cookies Per Second: {cps}</p>
           </div>
         </div>
-      </main>
+      </div>
+
       <TableHeader />
       <UpgradeGrandma buyGrandma={buyGrandma} grandmaCount={grandmaCount} />
       <UpgradeFarm buyFarm={buyFarm} farmCount={farmCount} />

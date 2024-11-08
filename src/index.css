@@ -1,30 +1,36 @@
-/* using CSS Locks = body { font-size: 4vw;} sets the font size to 4% of the vw = view point.  text should scale accordingly*/
-/* font-size curr set at 6vw for all - organise at end.  ALSO include a maximum font size or it can go v large on wide monitors*/
-
 * {
   box-sizing: border-box;
   font-family: monospace;
 }
+:root {
+  --primary-color: #dec2a1;
+  --secondary-color: #95b491;
+  --accent-color: #861625;
+  --highlight-color: #182416;
+  --glow-spread-color: white;
+  --tree-cookie-color: #6eb663;
+}
+/* <<>> */
 
 body {
-  margin: 0;
   position: absolute;
   background-size: cover;
   background-image: url(assets/Xmas.png);
   color: var(--primary-color);
-  font-size: 1.5vw;
   font-weight: bold;
 }
 
 h1 {
+  font-size: 2vw;
   color: var(--primary-color);
   margin-left: 150px;
-  font-size: 3vw;
   justify-content: center;
 }
-
+em {
+  font-size: 3vw;
+  text-emphasis: triangle #6eb663;
+}
 p {
-  margin-left: 20px;
   font-size: 1.5vw;
   margin: 10px;
 }
@@ -32,7 +38,7 @@ p {
 .upgradeOptions {
   font-size: 1vw;
   font-weight: bold;
-  color: black;
+  color: var(--highlight-color);
   display: grid;
   grid-template-columns: repeat(5, 90px);
   gap: 20px;
@@ -55,13 +61,11 @@ p {
   border-color: transparent;
   cursor: pointer;
 }
-
 #factory-btn {
   background-color: transparent;
   border-color: transparent;
   cursor: pointer;
 }
-
 button:active {
   transform: scale(0.9);
 }
@@ -84,15 +88,12 @@ button:active {
   gap: 0px;
   margin-left: 150px;
 }
-
 .box {
   display: flex;
   align-items: left;
   padding: 0px;
   font-size: 1vw;
 }
-
-/* box containing 2 counts - split into two rows */
 /* I don't need a box-one*/
 .box-two {
   display: flex;
@@ -100,55 +101,27 @@ button:active {
   gap: 0px;
   margin: 20px;
 }
-
-/* Sub-box styles within the second main box */
 .sub-box {
   display: flex;
 }
 
-/*.cookie-btn {
-  background-color: transparent;
-  border-color: transparent;
-  cursor: pointer;
-}*/
-
 /*Source: dev.to*/
 /*Glow Button*/
-:root {
-  --primary-color: #dec2a1;
-  --secondary-color: #a2c1a4;
-  --accent-color: #861625;
-  --highlight-color: #212f1f;
-  --background-color: #9c6029;
-  --glow-color: #dec2a1;
-  --glow-spread-color: white;
-}
-
 .cookie-btn {
-  border: 0.25em solid var(--glow-color); /*shorten all css like this*/
-  padding: 1em 3em;
-  color: var(--glow-color);
+  border: 0.25em solid var(--primary-color);
+  padding: 1.5em 1.5em;
   background-color: var(--btn-color);
-  border-radius: 1em;
-  outline: none;
-  box-shadow: 0 0 1em 0.25em var(--glow-color),
-    0 0 1em 1em var(--glow-spread-color),
-    inset 0 0 0.75em 0.25em var(--glow-color);
-  text-shadow: 0 0 0.5em var(--glow-color);
+  border-radius: 10em;
+  box-shadow: 0 0 1em 0.25em var(--primary-color),
+    0 0 3em 1em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--primary-color);
+  text-shadow: 0 0 0.5em var(--primary-color);
   position: relative;
   transition: all 0.3s;
 }
-
 button:hover {
-  color: var(--btn-color);
-  background-color: var(--glow-color);
-  box-shadow: 0 0 1em 0.25em var(--glow-color),
+  background-color: var(--primary-color);
+  box-shadow: 0 0 1em 0.25em var(--primary-color),
     0 0 4em 2em var(--glow-spread-color),
-    inset 0 0 0.75em 0.25em var(--glow-color);
-}
-
-button:active {
-  box-shadow: 0 0 0.6em 0.25em var(--glow-color),
-    0 0 2.5em 2em var(--glow-spread-color),
-    inset 0 0 0.5em 0.25em var(--glow-color);
+    inset 0 0 0.75em 0.25em var(--primary-color);
 }
