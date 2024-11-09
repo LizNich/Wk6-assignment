@@ -10,12 +10,10 @@
   --glow-spread-color: white;
   --tree-cookie-color: #6eb663;
 }
-/* <<>> */
 
 body {
   font-weight: bold;
   position: absolute;
-  font-weight: bold;
   height: 100vh;
   color: var(--primary-color);
   background-image: url(assets/Xmas.png);
@@ -28,8 +26,7 @@ body {
 h1 {
   font-size: 2vw;
   color: var(--primary-color);
-  margin-left: 150px;
-  justify-content: center;
+  margin-left: 10%;
 }
 em {
   font-size: 3vw;
@@ -42,15 +39,15 @@ p {
 
 .upgradeOptions {
   font-size: 1vw;
-  font-weight: bold;
   color: var(--highlight-color);
   display: grid;
-  grid-template-columns: repeat(5, 90px);
+  grid-template-columns: repeat(5, 15%);
   gap: 20px;
   padding: 6px;
   background-color: var(--secondary-color);
-  margin-left: 150px;
-  margin-right: 700px;
+  margin-left: 10%;
+  justify-content: start;
+  width: 70%;
   margin-top: 10px;
   border-radius: 10px;
 }
@@ -82,16 +79,16 @@ button:active {
   padding: 10px;
   border-radius: 10px;
   margin-top: 10px;
-  margin-left: 150px;
+  margin-left: 10%;
   cursor: pointer;
 }
 
-/*STYLE BOXES FOR COOKIE +2 COUNTERS*/
+/*Upgrade flex-box*/
 .container {
   display: flex;
   width: 50vw;
   gap: 0px;
-  margin-left: 150px;
+  margin-left: 10%;
 }
 .box {
   display: flex;
@@ -110,8 +107,7 @@ button:active {
   display: flex;
 }
 
-/*Source: dev.to*/
-/*Glow Button*/
+/* Glow Button styling @dev.to*/
 .cookie-btn {
   border: 0.25em solid var(--primary-color);
   padding: 1.5em 1.5em;
@@ -129,4 +125,30 @@ button:hover {
   box-shadow: 0 0 1em 0.25em var(--primary-color),
     0 0 4em 2em var(--glow-spread-color),
     inset 0 0 0.75em 0.25em var(--primary-color);
+}
+
+/* MediaQ's*/
+@media (max-width: 800px) {
+  h1 {
+    font-size: 6vw;
+    text-align: center;
+  }
+  em {
+    font-size: 7vw;
+  }
+  p {
+    font-size: 5vw;
+  }
+  .upgradeOptions {
+    font-size: 3.5vw;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    margin: 0 auto;
+    padding: 2px;
+    width: 70%;
+  }
+  .container {
+    flex-direction: column;
+    width: 90vw;
+  }
 }
