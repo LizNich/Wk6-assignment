@@ -1,5 +1,12 @@
 import BlueImage from "../assets/twoelfblue.png";
+import squeakSound from "../assets/squeak.mp3";
+
 export default function UpgradeBlue({ buyBlue, blueCount }) {
+  const clickSound = new Audio(squeakSound);
+  const handleClick = () => {
+    clickSound.play();
+    buyBlue();
+  };
   return (
     <div className="upgradeOptions">
       <div>Happy Blue Elf</div>
@@ -7,7 +14,7 @@ export default function UpgradeBlue({ buyBlue, blueCount }) {
       <div>+10</div>
 
       <div>
-        <button id="blue-btn" onClick={buyBlue}>
+        <button id="blue-btn" onClick={handleClick}>
           <img
             src={BlueImage}
             width={50}

@@ -1,5 +1,12 @@
 import PinkImage from "../assets/threeelfpink.png";
+import squeakSound from "../assets/squeak.mp3";
+
 export default function UpgradePink({ buyPink, pinkCount }) {
+  const clickSound = new Audio(squeakSound);
+  const handleClick = () => {
+    clickSound.play();
+    buyPink();
+  };
   return (
     <div className="upgradeOptions">
       <div>Speedy Pink Elf</div>
@@ -7,7 +14,7 @@ export default function UpgradePink({ buyPink, pinkCount }) {
       <div>+100</div>
 
       <div>
-        <button id="pink-btn" onClick={buyPink}>
+        <button id="pink-btn" onClick={handleClick}>
           <img
             src={PinkImage}
             width={50}
