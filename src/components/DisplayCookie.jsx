@@ -12,8 +12,8 @@ export default function DisplayCookie({ incrementCookies }) {
     <button className="cookie-btn">
       <img
         src={CookieImage}
-        width={100}
-        height={100}
+        width={75}
+        height={90}
         alt="A Cookie"
         title="Buy a Cookie - click here!"
         onClick={handleClick}
